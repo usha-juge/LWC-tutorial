@@ -3,7 +3,8 @@ import createNewContact from '@salesforce/apex/ContactController.createNewContac
 export default class NewContactForm extends LightningElement {
 firstName ='';
 lastName ='';
-
+contactCreated = false;
+hasError = false;
 handleFirstName(event){
     this.firstName = event.target.value;
 }
@@ -14,10 +15,12 @@ handleLastName(event){
 handleNewContactBtn(){
     createNewContact({firstName:this.firstName,lastName:this.lastName})
     .then(result => {
-        alert("Contact created successfully.");
+        this.contactCreated = true;
+        this.hasError = false;
     })
     .catch(error => {
-        alert("Error:"+error.body.message);
+        this.contactCreated = false;
+        this.hasError = true;
     });
 }
 }
