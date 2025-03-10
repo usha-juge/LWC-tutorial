@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Accounts List">
+        <template if:true={accounts}>
+            <ul class="slds-list_dotted"></ul>
+            <template for:each={accounts} for:item="account">
+                <li key={account.Id} class="slds-item">
+                    <strong>{account.Name}</strong>
+                </li>
+            </template>
+        </template> 
+        <template if:true={error}>
+            <p>Error: {error}</p>
+        </template>
+    </lightning-card>
+</template>

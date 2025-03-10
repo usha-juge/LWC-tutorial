@@ -1,0 +1,145 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red246\green246\blue246;\red0\green0\blue0;\red231\green231\blue231;
+\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c97255\c97255\c97255;\cssrgb\c0\c0\c0;\cssrgb\c92549\c92549\c92549;
+\cssrgb\c50196\c50196\c50196;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth15047\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrnil \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 /**\cb1 \
+\cb2 \'a0*\'a0@name\'a0PackageTests\cb1 \
+\cb2 \'a0*\'a0@description\'a0This\'a0class\'a0provide\'a0test\'a0coverage\'a0for\'a0code\'a0included\'a0in\'a0the\'a0unmanaged\'a0package\cb1 \
+\cb2 **/\cb1 \
+\cb2 @isTest\cb1 \
+\cb2 private\'a0class\'a0PackageTests\'a0\{\cb1 \
+\
+\
+\cb2 \'a0\'a0\'a0\'a0/**\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@name\'a0chartHelper_UnitTest\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@description\'a0Test\'a0coverage\'a0for\'a0the\'a0packaged\'a0version\'a0of\'a0the\'a0chartHelper\'a0class\cb1 \
+\cb2 \'a0\'a0\'a0\'a0**/\cb1 \
+\cb2 \'a0\'a0\'a0\'a0static\'a0TestMethod\'a0void\'a0chartHelper_UnitTest()\{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0chartHelper.chartData\'a0c\'a0=\'a0new\'a0chartHelper.chartData('test',1);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\}\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0/**\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@name\'a0orderTrigger_UnitTest\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@description\'a0Test\'a0coverage\'a0for\'a0the\'a0packaged\'a0version\'a0of\'a0the\'a0orderTrigger\'a0and\'a0orderHelper\'a0class\cb1 \
+\cb2 \'a0\'a0\'a0\'a0**/\cb1 \
+\cb2 \'a0\'a0\'a0\'a0static\'a0TestMethod\'a0void\'a0orderTrigger_UnitTest()\{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.startTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Id\'a0standardPricebookId\'a0=\'a0test.getStandardPricebookId();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0orderHelper.afterUpdate(new\'a0List<Order>(),\'a0new\'a0List<Order>());\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0orderHelper.rollUpOrderItems(new\'a0Set<Id>());\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Product2\'a0testProduct\'a0=\'a0new\'a0Product2(Name='Test',isActive=true,Family='Entree',Initial_Inventory__c=21);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testProduct;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0PricebookEntry\'a0testPricebookEntry\'a0=\'a0new\'a0PricebookEntry(Product2Id=testProduct.Id,Pricebook2Id=standardPricebookId,UnitPrice=1);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testPricebookEntry;\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testProduct.Quantity_Ordered__c\'a0=\'a01;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0update\'a0testProduct;\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Account\'a0testAccount\'a0=\'a0new\'a0Account(Name='Test');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testAccount;\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Order\'a0testOrder\'a0=\'a0new\'a0Order();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrder.AccountId\'a0=\'a0testAccount.Id;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrder.EffectiveDate\'a0=\'a0date.newInstance(2017,1,1);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrder.Status\'a0=\'a0'Draft';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrder.Pricebook2Id\'a0=\'a0standardPricebookId;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testOrder;\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0OrderItem\'a0testOrderItem\'a0=\'a0new\'a0OrderItem();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrderItem.OrderId\'a0=\'a0testOrder.Id;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrderItem.PricebookEntryId\'a0=\'a0testPricebookEntry.Id;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrderItem.Quantity\'a0=\'a01;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrderItem.UnitPrice\'a0=\'a01;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testOrderItem;\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0delete\'a0testOrder;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0undelete\'a0testOrder;\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0testOrder.Status\'a0=\'a0'Activated';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0update\'a0testOrder;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.stopTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\}\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0/**\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@name\'a0product2Helper_UnitTest\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@description\'a0Test\'a0coverage\'a0for\'a0the\'a0packaged\'a0version\'a0of\'a0the\'a0product2Helper\'a0class\cb1 \
+\cb2 \'a0\'a0\'a0\'a0**/\cb1 \
+\cb2 \'a0\'a0\'a0\'a0static\'a0TestMethod\'a0void\'a0product2Helper_UnitTest()\{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.startTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Product2\'a0testProduct\'a0=\'a0new\'a0product2(Name='Test',Family='Entree',Initial_Inventory__c=0);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testProduct;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0product2Helper.afterUpdate();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0product2Helper.postAlerts(new\'a0List<Product2>\{testProduct\});\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.stopTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\}\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0/**\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@name\'a0product2Extension_UnitTest\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@description\'a0Test\'a0coverage\'a0for\'a0the\'a0packaged\'a0version\'a0of\'a0the\'a0product2Extension\'a0class\cb1 \
+\cb2 \'a0\'a0\'a0\'a0**/\cb1 \
+\cb2 \'a0\'a0\'a0\'a0static\'a0TestMethod\'a0void\'a0product2Extension_UnitTest()\{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.startTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0product2Extension\'a0ext\'a0=\'a0new\'a0product2Extension();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.getInventory();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.addRows();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.save();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.stopTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\}\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0/**\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@name\'a0announcementQueueable_UnitTest\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@description\'a0Test\'a0coverage\'a0for\'a0the\'a0packaged\'a0version\'a0of\'a0the\'a0announcementQueueable\'a0class\cb1 \
+\cb2 \'a0\'a0\'a0\'a0**/\cb1 \
+\cb2 \'a0\'a0\'a0\'a0static\'a0TestMethod\'a0void\'a0announcementQueueable_UnitTest()\{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.startTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0List<ConnectApi.AnnouncementInput>\'a0announcements\'a0=\'a0new\'a0List<ConnectApi.AnnouncementInput>();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0announcementQueueable\'a0cls\'a0=\'a0new\'a0announcementQueueable();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0cls.toPost\'a0=\'a0announcements;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0try\'a0\{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0announcementQueueable.postAnnouncements(announcements);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\'a0catch\'a0(\'a0Exception\'a0e\'a0)\{\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.stopTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\}\cb1 \
+\
+\cb2 \'a0\'a0\'a0\'a0/**\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@name\'a0orderExtension_UnitTest\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0*\'a0@description\'a0Test\'a0coverage\'a0for\'a0the\'a0packaged\'a0version\'a0of\'a0the\'a0orderExtension\cb1 \
+\cb2 \'a0\'a0\'a0\'a0**/\cb1 \
+\cb2 \'a0\'a0\'a0\'a0static\'a0TestMethod\'a0void\'a0orderExtension_UnitTest()\{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.startTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Account\'a0testAccount\'a0=\'a0new\'a0Account(Name='Test');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testAccount;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Contact\'a0testContact\'a0=\'a0new\'a0Contact(LastName='Test',AccountId=testAccount.Id);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testContact;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Order\'a0testOrder\'a0=\'a0new\'a0Order(AccountId=testAccount.Id,EffectiveDate=system.today(),Status='Draft');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0insert\'a0testOrder;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0orderExtension\'a0ext\'a0=\'a0new\'a0orderExtension(new\'a0ApexPages.standardController(testOrder));\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.getFamilyOptions();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.onFieldChange();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.save();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.selectFamily();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.first();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.next();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.previous();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.last();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.getHasPrevious();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.getHasNext();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.getTotalPages();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ext.getPageNumber();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Test.stopTest();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\}\cb1 \
+\
+\cb2 \}\cb1 \cell \lastrow\row
+}
